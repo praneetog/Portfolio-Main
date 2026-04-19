@@ -13,7 +13,7 @@ export default function MessiSection() {
           <div className="relative group overflow-hidden rounded-[2rem] md:rounded-[3rem] aspect-[4/5] reveal-text w-full max-w-2xl mx-auto lg:mx-0">
             <div className="absolute inset-0 bg-blood/10 z-10 mix-blend-color group-hover:bg-transparent transition-colors duration-700" />
             <Image 
-              src="https://picsum.photos/seed/leo-messi/1200/1500" 
+              src="/images/Messi.jpg" 
               alt="Lionel Messi"
               fill
               referrerPolicy="no-referrer"
@@ -42,12 +42,8 @@ export default function MessiSection() {
             </h2>
 
             <div className="flex items-center gap-6 reveal-text">
-              <div className="w-12 md:w-16 h-12 md:h-16 rounded-full glass border border-blood flex items-center justify-center">
-                <Heart className="w-6 md:w-8 h-6 md:h-8 text-blood fill-blood" />
-              </div>
               <div className="flex flex-col text-left">
                 <span className="text-xl md:text-2xl font-black font-heavy">- LIONEL MESSI</span>
-                <span className="text-white/40 uppercase tracking-widest text-[10px] md:text-xs font-black">Global Ambassador & Football Legend</span>
               </div>
             </div>
           </div>

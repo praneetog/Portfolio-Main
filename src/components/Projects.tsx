@@ -8,14 +8,14 @@ const projects = [
     desc: "A collaborative real-time platform connecting users across the globe in a shared interactive environment.",
     link: "https://github.com/praneetog/Globe-Together",
     tags: ["Next.js", "WebSockets", "Three.js"],
-    image: "https://picsum.photos/seed/globe/1200/800"
+    image: "/images/GlobeTogether.png"
   },
   {
     title: "PARSEY AI",
     desc: "Advanced AI-powered web scraper built with Node.js and LangChain for structured data extraction.",
     link: "https://github.com/praneetog/AI-WebScraper",
     tags: ["Node.js", "LangChain", "Puppeteer"],
-    image: "https://picsum.photos/seed/parsey/1200/800"
+    image: "/images/ParseyAI.png"
   }
 ];
 
@@ -94,7 +94,7 @@ export default function Projects() {
         </div>
 
         {/* Aesthetic Break */}
-        <ScrollReveal className="mt-48 lg:mt-64 min-h-[40vh] py-24 md:py-32 relative overflow-hidden border border-white/5 rounded-[3rem]">
+        <ScrollReveal className="mt-48 lg:mt-64 min-h-[40vh] relative overflow-hidden border border-white/5 rounded-[3rem]">
           <img 
             src="https://picsum.photos/seed/aesthetic/1920/1080" 
             alt="Atmospheric Break"

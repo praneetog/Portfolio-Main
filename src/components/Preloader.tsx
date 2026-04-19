@@ -30,7 +30,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
         <div className="relative w-full max-w-[90vw] mx-auto text-center">
           {/* Base Layer: Dark Grey */}
           <div className="text-[6.5vw] font-black font-heavy text-white/5 select-none leading-none tracking-tighter uppercase whitespace-nowrap">
-            ASSASSINATING
+            AWAKENING
           </div>
           
           {/* Top Layer: Blood Red with Fill Logic */}
@@ -38,7 +38,7 @@ export default function Preloader({ onComplete }: { onComplete: () => void }) {
             className="absolute inset-0 text-[6.5vw] font-black font-heavy text-blood select-none leading-none tracking-tighter uppercase overflow-hidden whitespace-nowrap flex justify-center"
             style={{ width: `${percent}%`, transition: 'width 0.1s linear' }}
           >
-            <span className="w-full">ASSASSINATING</span>
+            <span className="w-full">AWAKENING</span>
           </div>
         </div>
 

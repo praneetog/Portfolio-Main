@@ -55,10 +55,10 @@ export default function Hero() {
           <div className="absolute inset-x-0 top-0 h-1 bg-blood/40 blur-sm animate-pulse z-20" />
           <div className="absolute inset-0 bg-blood/20 mix-blend-multiply transition-opacity duration-700 opacity-50 group-hover:opacity-0" />
           <img 
-            src="https://picsum.photos/seed/assassin/800/1000" 
+            src="/images/Praneet.jpeg" 
             alt="Praneet Kashyap Profile"
             referrerPolicy="no-referrer"
-            className="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
+            className="w-full h-full object-cover object-top grayscale brightness-75 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700"
           />
         </div>
       </ScrollReveal>
