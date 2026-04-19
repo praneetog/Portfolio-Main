@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Inter:wght@300;400;600;700;900&family=Syne:wght@400;700;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cinzel", serif;
+  --font-sans: "Inter", sans-serif;
+  --font-heavy: "Syne", sans-serif;
+  
+  --color-blood: #8b0000;
+  --color-premium-black: #0a0a0a;
+}
+
+@layer base {
+  body {
+    @apply bg-premium-black text-white font-sans;
+    cursor: none; /* Hide default cursor for custom one */
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display tracking-wider;
+  }
+}
+
+/* Custom Styles */
+.glass {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+/* Fluid Typography Utilities */
+.text-fluid-h1 {
+  font-size: clamp(2.5rem, 10vw, 12rem);
+  line-height: 0.9;
+}
+
+.text-fluid-h2 {
+  font-size: clamp(1.8rem, 7vw, 8rem);
+  line-height: 1;
+}
+
+.text-fluid-p {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+}
+
+/* Global Reveal Animation */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.2, 0, 0.2, 1), transform 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+}
+
+.reveal-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Marquee Logic */
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: 2rem;
+}
+
+.marquee-content {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-around;
+  gap: 2rem;
+  min-width: 100%;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(400%); }
+}
+
+.animate-scan {
+  animation: scan 2s linear infinite;
+}
+
+/* Hide scrollbar but keep functionality */
+/* Webkit based browsers */
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  scroll-behavior: smooth;
+}
+
+/* Custom Cursor Insignia */
+.cursor-insignia {
+  position: fixed;
+  width: min(32px, 8vw);
+  height: min(32px, 8vw);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: transform 0.1s ease-out;
+}
+
+.insignia-shape {
+  width: 100%;
+  height: 100%;
+  background: white;
+  clip-path: polygon(50% 0%, 100% 100%, 50% 80%, 0% 100%);
+}
